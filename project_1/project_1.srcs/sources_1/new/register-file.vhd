@@ -171,421 +171,359 @@ ARCHITECTURE Behavioral OF registerFile IS
     END COMPONENT;
 
     -- Inner Signals
-    SIGNAL decodeq0 : STD_LOGIC;
-    SIGNAL decodeq1 : STD_LOGIC;
-    SIGNAL decodeq2 : STD_LOGIC;
-    SIGNAL decodeq3 : STD_LOGIC;
-    SIGNAL decodeq4 : STD_LOGIC;
-    SIGNAL decodeq5 : STD_LOGIC;
-    SIGNAL decodeq6 : STD_LOGIC;
-    SIGNAL decodeq7 : STD_LOGIC;
-    SIGNAL decodeq8 : STD_LOGIC;
-    SIGNAL decodeq9 : STD_LOGIC;
-    SIGNAL decodeq10 : STD_LOGIC;
-    SIGNAL decodeq11 : STD_LOGIC;
-    SIGNAL decodeq12 : STD_LOGIC;
-    SIGNAL decodeq13 : STD_LOGIC;
-    SIGNAL decodeq14 : STD_LOGIC;
-    SIGNAL decodeq15 : STD_LOGIC;
-    SIGNAL decodeq16 : STD_LOGIC;
-    SIGNAL decodeq17 : STD_LOGIC;
-    SIGNAL decodeq18 : STD_LOGIC;
-    SIGNAL decodeq19 : STD_LOGIC;
-    SIGNAL decodeq20 : STD_LOGIC;
-    SIGNAL decodeq21 : STD_LOGIC;
-    SIGNAL decodeq22 : STD_LOGIC;
-    SIGNAL decodeq23 : STD_LOGIC;
-    SIGNAL decodeq24 : STD_LOGIC;
-    SIGNAL decodeq25 : STD_LOGIC;
-    SIGNAL decodeq26 : STD_LOGIC;
-    SIGNAL decodeq27 : STD_LOGIC;
-    SIGNAL decodeq28 : STD_LOGIC;
-    SIGNAL decodeq29 : STD_LOGIC;
-    SIGNAL decodeq30 : STD_LOGIC;
-    SIGNAL decodeq31 : STD_LOGIC;
+    SIGNAL decoderq0, decoderq1, decoderq2, decoderq3, decoderq4, decoderq5, decoderq6, decoderq7, decoderq8, decoderq9, decoderq10, decoderq11, decoderq12, decoderq13, decoderq14, decoderq15, decoderq16, decoderq17, decoderq18, decoderq19, decoderq20, decoderq21, decoderq22, decoderq23, decoderq24, decoderq25, decoderq26, decoderq27, decoderq28, decoderq29, decoderq30, decoderq31 : STD_LOGIC;
 
-    SIGNAL sigReg0 : STD_LOGIC_VECTOR(31 DOWNTO 0);
-    SIGNAL sigReg1 : STD_LOGIC_VECTOR(31 DOWNTO 0);
-    SIGNAL sigReg2 : STD_LOGIC_VECTOR(31 DOWNTO 0);
-    SIGNAL sigReg3 : STD_LOGIC_VECTOR(31 DOWNTO 0);
-    SIGNAL sigReg4 : STD_LOGIC_VECTOR(31 DOWNTO 0);
-    SIGNAL sigReg5 : STD_LOGIC_VECTOR(31 DOWNTO 0);
-    SIGNAL sigReg6 : STD_LOGIC_VECTOR(31 DOWNTO 0);
-    SIGNAL sigReg7 : STD_LOGIC_VECTOR(31 DOWNTO 0);
-    SIGNAL sigReg8 : STD_LOGIC_VECTOR(31 DOWNTO 0);
-    SIGNAL sigReg9 : STD_LOGIC_VECTOR(31 DOWNTO 0);
-    SIGNAL sigReg10 : STD_LOGIC_VECTOR(31 DOWNTO 0);
-    SIGNAL sigReg11 : STD_LOGIC_VECTOR(31 DOWNTO 0);
-    SIGNAL sigReg12 : STD_LOGIC_VECTOR(31 DOWNTO 0);
-    SIGNAL sigReg13 : STD_LOGIC_VECTOR(31 DOWNTO 0);
-    SIGNAL sigReg14 : STD_LOGIC_VECTOR(31 DOWNTO 0);
-    SIGNAL sigReg15 : STD_LOGIC_VECTOR(31 DOWNTO 0);
-    SIGNAL sigReg16 : STD_LOGIC_VECTOR(31 DOWNTO 0);
-    SIGNAL sigReg17 : STD_LOGIC_VECTOR(31 DOWNTO 0);
-    SIGNAL sigReg18 : STD_LOGIC_VECTOR(31 DOWNTO 0);
-    SIGNAL sigReg19 : STD_LOGIC_VECTOR(31 DOWNTO 0);
-    SIGNAL sigReg20 : STD_LOGIC_VECTOR(31 DOWNTO 0);
-    SIGNAL sigReg21 : STD_LOGIC_VECTOR(31 DOWNTO 0);
-    SIGNAL sigReg22 : STD_LOGIC_VECTOR(31 DOWNTO 0);
-    SIGNAL sigReg23 : STD_LOGIC_VECTOR(31 DOWNTO 0);
-    SIGNAL sigReg24 : STD_LOGIC_VECTOR(31 DOWNTO 0);
-    SIGNAL sigReg25 : STD_LOGIC_VECTOR(31 DOWNTO 0);
-    SIGNAL sigReg26 : STD_LOGIC_VECTOR(31 DOWNTO 0);
-    SIGNAL sigReg27 : STD_LOGIC_VECTOR(31 DOWNTO 0);
-    SIGNAL sigReg28 : STD_LOGIC_VECTOR(31 DOWNTO 0);
-    SIGNAL sigReg29 : STD_LOGIC_VECTOR(31 DOWNTO 0);
-    SIGNAL sigReg30 : STD_LOGIC_VECTOR(31 DOWNTO 0);
-    SIGNAL sigReg31 : STD_LOGIC_VECTOR(31 DOWNTO 0);
+    SIGNAL sigReg0, sigReg1, sigReg2, sigReg3, sigReg4, sigReg5, sigReg6, sigReg7, sigReg8, sigReg9, sigReg10, sigReg11, sigReg12, sigReg13, sigReg14, sigReg15, sigReg16, sigReg17, sigReg18, sigReg19, sigReg20, sigReg21, sigReg22, sigReg23, sigReg24, sigReg25, sigReg26, sigReg27, sigReg28, sigReg29, sigReg30, sigReg31 : STD_LOGIC_VECTOR(31 DOWNTO 0);
 
     SIGNAL mux32Z : STD_LOGIC_VECTOR(31 DOWNTO 0);
     SIGNAL mux2z : STD_LOGIC_VECTOR(31 DOWNTO 0);
 
 BEGIN
-    PROCESS (
-        shift_src,
-        write_reg,
-        write_src,
-        data_src,
-        clk
-        )
-    BEGIN
+    -- PROCESS (
+    --     shift_src,
+    --     write_reg,
+    --     write_src,
+    --     data_src,
+    --     clk
+    --     )
+    -- BEGIN
 
-        decoder : decoder_mux PORT MAP(
-            write_reg => wr_index,
-            decoderq0 => q0,
-            decorderq1 => q1,
-            decorderq2 => q2,
-            decorderq3 => q3,
-            decorderq4 => q4,
-            decorderq5 => q5,
-            decorderq6 => q6,
-            decorderq7 => q7,
-            decorderq8 => q8,
-            decorderq9 => q9,
-            decorderq10 => q10,
-            decorderq11 => q11,
-            decorderq12 => q12,
-            decorderq13 => q13,
-            decorderq14 => q14,
-            decorderq15 => q15,
-            decorderq16 => q16,
-            decorderq17 => q17,
-            decorderq18 => q18,
-            decorderq19 => q19,
-            decorderq20 => q20,
-            decorderq21 => q21,
-            decorderq22 => q22,
-            decorderq23 => q23,
-            decorderq24 => q24,
-            decorderq25 => q25,
-            decorderq26 => q26,
-            decorderq27 => q27,
-            decorderq28 => q28,
-            decorderq29 => q29,
-            decorderq30 => q30,
-            decorderq31 => q31
-        );
+    decoder : decoder_mux PORT MAP(
+        wr_index => write_reg,
+        q0 => decoderq0,
+        q1 => decoderq1,
+        q2 => decoderq2,
+        q3 => decoderq3,
+        q4 => decoderq4,
+        q5 => decoderq5,
+        q6 => decoderq6,
+        q7 => decoderq7,
+        q8 => decoderq8,
+        q9 => decoderq9,
+        q10 => decoderq10,
+        q11 => decoderq11,
+        q12 => decoderq12,
+        q13 => decoderq13,
+        q14 => decoderq14,
+        q15 => decoderq15,
+        q16 => decoderq16,
+        q17 => decoderq17,
+        q18 => decoderq18,
+        q19 => decoderq19,
+        q20 => decoderq20,
+        q21 => decoderq21,
+        q22 => decoderq22,
+        q23 => decoderq23,
+        q24 => decoderq24,
+        q25 => decoderq25,
+        q26 => decoderq26,
+        q27 => decoderq27,
+        q28 => decoderq28,
+        q29 => decoderq29,
+        q30 => decoderq30,
+        q31 => decoderq31
+    );
 
-        mux2_32bit : mux2_32 PORT MAP(
-            write_src => src,
-            data_src => In0,
-            mux32Z => In1,
-            mux2z => Z
-        );
+    mux2_32bit : mux2_32 PORT MAP(
+        src => write_src,
+        In0 => data_src,
+        In1 => mux32Z,
+        Z => mux2z
+    );
 
-        mux32_32bit : mux32_32bit PORT MAP(
-            shift_src => src,
-            sigReg0 => in0,
-            sigReg1 => in1,
-            sigReg2 => in2,
-            sigReg3 => in3,
-            sigReg4 => in4,
-            sigReg5 => in5,
-            sigReg6 => in6,
-            sigReg7 => in7,
-            sigReg8 => in8,
-            sigReg9 => in9,
-            sigReg10 => in10,
-            sigReg11 => in11,
-            sigReg12 => in12,
-            sigReg13 => in13,
-            sigReg14 => in14,
-            sigReg15 => in15,
-            sigReg16 => in16,
-            sigReg17 => in17,
-            sigReg18 => in18,
-            sigReg19 => in19,
-            sigReg20 => in20,
-            sigReg21 => in21,
-            sigReg22 => in22,
-            sigReg23 => in23,
-            sigReg24 => in24,
-            sigReg25 => in25,
-            sigReg26 => in26,
-            sigReg27 => in27,
-            sigReg28 => in28,
-            sigReg29 => in29,
-            sigReg30 => in30,
-            sigReg31 => in31,
-            mux32Z => z
-        );
+    mux32_1 : mux32_32bit PORT MAP(
+        src => shift_src,
+        in0 => sigReg0,
+        in1 => sigReg1,
+        in2 => sigReg2,
+        in3 => sigReg3,
+        in4 => sigReg4,
+        in5 => sigReg5,
+        in6 => sigReg6,
+        in7 => sigReg7,
+        in8 => sigReg8,
+        in9 => sigReg9,
+        in10 => sigReg10,
+        in11 => sigReg11,
+        in12 => sigReg12,
+        in13 => sigReg13,
+        in14 => sigReg14,
+        in15 => sigReg15,
+        in16 => sigReg16,
+        in17 => sigReg17,
+        in18 => sigReg18,
+        in19 => sigReg19,
+        in20 => sigReg20,
+        in21 => sigReg21,
+        in22 => sigReg22,
+        in23 => sigReg23,
+        in24 => sigReg24,
+        in25 => sigReg25,
+        in26 => sigReg26,
+        in27 => sigReg27,
+        in28 => sigReg28,
+        in29 => sigReg29,
+        in30 => sigReg30,
+        in31 => sigReg31,
+        z => mux32Z
+    );
 
-        reg0 : register32 PORT MAP(
-            mux2z => data,
-            decoderq0 => load,
-            '0' => clear,
-            clk => clk,
-            sigReg0 => Q
-        );
-        reg1 : register32 PORT MAP(
-            mux2z => data,
-            decoderq0 => load,
-            '0' => clear,
-            clk => clk,
-            sigReg1 => Q
-        );
-        reg2 : register32 PORT MAP(
-            mux2z => data,
-            decoderq0 => load,
-            '0' => clear,
-            clk => clk,
-            sigReg2 => Q
-        )
-        reg3 : register32 PORT MAP(
-            mux2z => data,
-            decoderq0 => load,
-            '0' => clear,
-            clk => clk,
-            sigReg3 => Q
-        )
-        reg4 : register32 PORT MAP(
-            mux2z => data,
-            decoderq0 => load,
-            '0' => clear,
-            clk => clk,
-            sigReg4 => Q
-        )
-        reg5 : register32 PORT MAP(
-            mux2z => data,
-            decoderq0 => load,
-            '0' => clear,
-            clk => clk,
-            sigReg5 => Q
-        )
-        reg6 : register32 PORT MAP(
-            mux2z => data,
-            decoderq0 => load,
-            '0' => clear,
-            clk => clk,
-            sigReg6 => Q
-        )
-        reg7 : register32 PORT MAP(
-            mux2z => data,
-            decoderq0 => load,
-            '0' => clear,
-            clk => clk,
-            sigReg7 => Q
-        )
-        reg8 : register32 PORT MAP(
-            mux2z => data,
-            decoderq0 => load,
-            '0' => clear,
-            clk => clk,
-            sigReg8 => Q
-        )
-        reg9 : register32 PORT MAP(
-            mux2z => data,
-            decoderq0 => load,
-            '0' => clear,
-            clk => clk,
-            sigReg9 => Q
-        )
-        reg10 : register32 PORT MAP(
-            mux2z => data,
-            decoderq0 => load,
-            '0' => clear,
-            clk => clk,
-            sigReg10 => Q
-        )
-        reg11 : register32 PORT MAP(
-            mux2z => data,
-            decoderq0 => load,
-            '0' => clear,
-            clk => clk,
-            sigReg11 => Q
-        )
-        reg12 : register32 PORT MAP(
-            mux2z => data,
-            decoderq0 => load,
-            '0' => clear,
-            clk => clk,
-            sigReg12 => Q
-        )
-        reg13 : register32 PORT MAP(
-            mux2z => data,
-            decoderq0 => load,
-            '0' => clear,
-            clk => clk,
-            sigReg13 => Q
-        )
-        reg14 : register32 PORT MAP(
-            mux2z => data,
-            decoderq0 => load,
-            '0' => clear,
-            clk => clk,
-            sigReg14 => Q
-        )
-        reg15 : register32 PORT MAP(
-            mux2z => data,
-            decoderq0 => load,
-            '0' => clear,
-            clk => clk,
-            sigReg15 => Q
-        )
-        reg16 : register32 PORT MAP(
-            mux2z => data,
-            decoderq0 => load,
-            '0' => clear,
-            clk => clk,
-            sigReg16 => Q
-        )
-        reg17 : register32 PORT MAP(
-            mux2z => data,
-            decoderq0 => load,
-            '0' => clear,
-            clk => clk,
-            sigReg17 => Q
-        )
-        reg18 : register32 PORT MAP(
-            mux2z => data,
-            decoderq0 => load,
-            '0' => clear,
-            clk => clk,
-            sigReg18 => Q
-        )
-        reg19 : register32 PORT MAP(
-            mux2z => data,
-            decoderq0 => load,
-            '0' => clear,
-            clk => clk,
-            sigReg19 => Q
-        )
-        reg20 : register32 PORT MAP(
-            mux2z => data,
-            decoderq0 => load,
-            '0' => clear,
-            clk => clk,
-            sigReg20 => Q
-        )
-        reg21 : register32 PORT MAP(
-            mux2z => data,
-            decoderq0 => load,
-            '0' => clear,
-            clk => clk,
-            sigReg21 => Q
-        )
-        reg22 : register32 PORT MAP(
-            mux2z => data,
-            decoderq0 => load,
-            '0' => clear,
-            clk => clk,
-            sigReg22 => Q
-        )
-        reg23 : register32 PORT MAP(
-            mux2z => data,
-            decoderq0 => load,
-            '0' => clear,
-            clk => clk,
-            sigReg23 => Q
-        )
-        reg24 : register32 PORT MAP(
-            mux2z => data,
-            decoderq0 => load,
-            '0' => clear,
-            clk => clk,
-            sigReg24 => Q
-        )
-        reg25 : register32 PORT MAP(
-            mux2z => data,
-            decoderq0 => load,
-            '0' => clear,
-            clk => clk,
-            sigReg25 => Q
-        )
-        reg26 : register32 PORT MAP(
-            mux2z => data,
-            decoderq0 => load,
-            '0' => clear,
-            clk => clk,
-            sigReg26 => Q
-        )
-        reg27 : register32 PORT MAP(
-            mux2z => data,
-            decoderq0 => load,
-            '0' => clear,
-            clk => clk,
-            sigReg27 => Q
-        )
-        reg28 : register32 PORT MAP(
-            mux2z => data,
-            decoderq0 => load,
-            '0' => clear,
-            clk => clk,
-            sigReg28 => Q
-        )
-        reg29 : register32 PORT MAP(
-            mux2z => data,
-            decoderq0 => load,
-            '0' => clear,
-            clk => clk,
-            sigReg29 => Q
-        )
-        reg30 : register32 PORT MAP(
-            mux2z => data,
-            decoderq0 => load,
-            '0' => clear,
-            clk => clk,
-            sigReg30 => Q
-        )
-        reg31 : register32 PORT MAP(
-            mux2z => data,
-            decoderq0 => load,
-            '0' => clear,
-            clk => clk,
-            sigReg31 => Q
-        )
+    reg00 : register32 PORT MAP(
+        data => mux2z,
+        load => decoderq0,
+        clear => '0',
+        clk => clk,
+        Q => sigReg0
+    );
+    reg01 : register32 PORT MAP(
+        data => mux2z,
+        load => decoderq1,
+        clear => '0',
+        clk => clk,
+        Q => sigReg1
+    );
+    reg02 : register32 PORT MAP(
+        data => mux2z,
+        load => decoderq2,
+        clear => '0',
+        clk => clk,
+        Q => sigReg2
+    );
+    reg03 : register32 PORT MAP(
+        data => mux2z,
+        load => decoderq3,
+        clear => '0',
+        clk => clk,
+        Q => sigReg3
+    );
+    reg04 : register32 PORT MAP(
+        data => mux2z,
+        load => decoderq4,
+        clear => '0',
+        clk => clk,
+        Q => sigReg4
+    );
+    reg05 : register32 PORT MAP(
+        data => mux2z,
+        load => decoderq5,
+        clear => '0',
+        clk => clk,
+        Q => sigReg5
+    );
+    reg06 : register32 PORT MAP(
+        data => mux2z,
+        load => decoderq6,
+        clear => '0',
+        clk => clk,
+        Q => sigReg6
+    );
+    reg07 : register32 PORT MAP(
+        data => mux2z,
+        load => decoderq7,
+        clear => '0',
+        clk => clk,
+        Q => sigReg7
+    );
+    reg08 : register32 PORT MAP(
+        data => mux2z,
+        load => decoderq8,
+        clear => '0',
+        clk => clk,
+        Q => sigReg8
+    );
+    reg09 : register32 PORT MAP(
+        data => mux2z,
+        load => decoderq9,
+        clear => '0',
+        clk => clk,
+        Q => sigReg9
+    );
+    reg10 : register32 PORT MAP(
+        data => mux2z,
+        load => decoderq10,
+        clear => '0',
+        clk => clk,
+        Q => sigReg10
+    );
+    reg11 : register32 PORT MAP(
+        data => mux2z,
+        load => decoderq11,
+        clear => '0',
+        clk => clk,
+        Q => sigReg11
+    );
+    reg12 : register32 PORT MAP(
+        data => mux2z,
+        load => decoderq12,
+        clear => '0',
+        clk => clk,
+        Q => sigReg12
+    );
+    reg13 : register32 PORT MAP(
+        data => mux2z,
+        load => decoderq13,
+        clear => '0',
+        clk => clk,
+        Q => sigReg13
+    );
+    reg14 : register32 PORT MAP(
+        data => mux2z,
+        load => decoderq14,
+        clear => '0',
+        clk => clk,
+        Q => sigReg14
+    );
+    reg15 : register32 PORT MAP(
+        data => mux2z,
+        load => decoderq15,
+        clear => '0',
+        clk => clk,
+        Q => sigReg15
+    );
+    reg16 : register32 PORT MAP(
+        data => mux2z,
+        load => decoderq16,
+        clear => '0',
+        clk => clk,
+        Q => sigReg16
+    );
+    reg17 : register32 PORT MAP(
+        data => mux2z,
+        load => decoderq17,
+        clear => '0',
+        clk => clk,
+        Q => sigReg17
+    );
+    reg18 : register32 PORT MAP(
+        data => mux2z,
+        load => decoderq18,
+        clear => '0',
+        clk => clk,
+        Q => sigReg18
+    );
+    reg19 : register32 PORT MAP(
+        data => mux2z,
+        load => decoderq19,
+        clear => '0',
+        clk => clk,
+        Q => sigReg19
+    );
+    reg20 : register32 PORT MAP(
+        data => mux2z,
+        load => decoderq20,
+        clear => '0',
+        clk => clk,
+        Q => sigReg20
+    );
+    reg21 : register32 PORT MAP(
+        data => mux2z,
+        load => decoderq21,
+        clear => '0',
+        clk => clk,
+        Q => sigReg21
+    );
+    reg22 : register32 PORT MAP(
+        data => mux2z,
+        load => decoderq22,
+        clear => '0',
+        clk => clk,
+        Q => sigReg22
+    );
+    reg23 : register32 PORT MAP(
+        data => mux2z,
+        load => decoderq23,
+        clear => '0',
+        clk => clk,
+        Q => sigReg23
+    );
+    reg24 : register32 PORT MAP(
+        data => mux2z,
+        load => decoderq24,
+        clear => '0',
+        clk => clk,
+        Q => sigReg24
+    );
+    reg25 : register32 PORT MAP(
+        data => mux2z,
+        load => decoderq25,
+        clear => '0',
+        clk => clk,
+        Q => sigReg25
+    );
+    reg26 : register32 PORT MAP(
+        data => mux2z,
+        load => decoderq26,
+        clear => '0',
+        clk => clk,
+        Q => sigReg26
+    );
+    reg27 : register32 PORT MAP(
+        data => mux2z,
+        load => decoderq27,
+        clear => '0',
+        clk => clk,
+        Q => sigReg27
+    );
+    reg28 : register32 PORT MAP(
+        data => mux2z,
+        load => decoderq28,
+        clear => '0',
+        clk => clk,
+        Q => sigReg28
+    );
+    reg29 : register32 PORT MAP(
+        data => mux2z,
+        load => decoderq29,
+        clear => '0',
+        clk => clk,
+        Q => sigReg29
+    );
+    reg30 : register32 PORT MAP(
+        data => mux2z,
+        load => decoderq30,
+        clear => '0',
+        clk => clk,
+        Q => sigReg30
+    );
+    reg31 : register32 PORT MAP(
+        data => mux2z,
+        load => decoderq31,
+        clear => '0',
+        clk => clk,
+        Q => sigReg31
+    );
 
-        sigReg0 => outReg0;
-        sigReg1 => outReg1;
-        sigReg2 => outReg2;
-        sigReg3 => outReg3;
-        sigReg4 => outReg4;
-        sigReg5 => outReg5;
-        sigReg6 => outReg6;
-        sigReg7 => outReg7;
-        sigReg8 => outReg8;
-        sigReg9 => outReg9;
-        sigReg10 => outReg10;
-        sigReg11 => outReg11;
-        sigReg12 => outReg12;
-        sigReg13 => outReg13;
-        sigReg14 => outReg14;
-        sigReg15 => outReg15;
-        sigReg16 => outReg16;
-        sigReg17 => outReg17;
-        sigReg18 => outReg18;
-        sigReg19 => outReg19;
-        sigReg20 => outReg20;
-        sigReg21 => outReg21;
-        sigReg22 => outReg22;
-        sigReg23 => outReg23;
-        sigReg24 => outReg24;
-        sigReg25 => outReg25;
-        sigReg26 => outReg26;
-        sigReg27 => outReg27;
-        sigReg28 => outReg28;
-        sigReg29 => outReg29;
-        sigReg30 => outReg30;
-        sigReg31 => outReg31;
-    END PROCESS;
+    outReg0 <= sigReg0;
+    outReg1 <= sigReg1;
+    outReg2 <= sigReg2;
+    outReg3 <= sigReg3;
+    outReg4 <= sigReg4;
+    outReg5 <= sigReg5;
+    outReg6 <= sigReg6;
+    outReg7 <= sigReg7;
+    outReg8 <= sigReg8;
+    outReg9 <= sigReg9;
+    outReg10 <= sigReg10;
+    outReg11 <= sigReg11;
+    outReg12 <= sigReg12;
+    outReg13 <= sigReg13;
+    outReg14 <= sigReg14;
+    outReg15 <= sigReg15;
+    outReg16 <= sigReg16;
+    outReg17 <= sigReg17;
+    outReg18 <= sigReg18;
+    outReg19 <= sigReg19;
+    outReg20 <= sigReg20;
+    outReg21 <= sigReg21;
+    outReg22 <= sigReg22;
+    outReg23 <= sigReg23;
+    outReg24 <= sigReg24;
+    outReg25 <= sigReg25;
+    outReg26 <= sigReg26;
+    outReg27 <= sigReg27;
+    outReg28 <= sigReg28;
+    outReg29 <= sigReg29;
+    outReg30 <= sigReg30;
+    outReg31 <= sigReg31;
+    -- END PROCESS;
 END Behavioral;

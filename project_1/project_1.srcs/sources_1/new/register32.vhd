@@ -46,10 +46,10 @@ begin
     process(clk, clear)
     begin
         if clear = '1' then
-            q <= x"00000000";
+            Q <= x"00000000";
         elsif rising_edge(clk) then
             if load='1' then
-                q <= data;
+                Q <= data;
             end if;
         end if;
      end process;
