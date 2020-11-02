@@ -44,8 +44,9 @@ begin
     process(src, In0, In1)
     begin
         case src  is
-            when "0" => Z <= In0;
-            when "1" => Z <= In1;
+            when '0' => Z <= In0;
+            when '1' => Z <= In1;
+            when others => Z <= x"00000000";
         end case ;
     end process;
 end Behavioral;

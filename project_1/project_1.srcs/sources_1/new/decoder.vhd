@@ -137,6 +137,7 @@ begin
             when "11101" => q29 <= '1';
             when "11110" => q30 <= '1';
             when "11111" => q31 <= '1';
+            when others => q0 <= '0';
         end case;
     end process;
 end Behavioral;
