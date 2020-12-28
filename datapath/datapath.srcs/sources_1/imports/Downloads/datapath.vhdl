@@ -4,7 +4,7 @@ use IEEE.std_logic_1164.all;
 ENTITY datapath IS
   PORT (
     data_in, constant_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    control : IN STD_LOGIC_VECTOR(22 DOWNTO 0);
+    control : IN STD_LOGIC_VECTOR(25 DOWNTO 0);
     Clk : IN STD_LOGIC;
     address_out, data_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     v, c, n, z : OUT STD_LOGIC
@@ -47,9 +47,9 @@ BEGIN
   register_file0 : register_file PORT MAP(
     Clk => Clk,
     load_enabled => control(0),
-    addr_a => control(17 DOWNTO 13),
-    addr_b => control(12 DOWNTO 8),
-    dest_d => control(22 DOWNTO 18),
+    addr_a => control(19 DOWNTO 14),
+    addr_b => control(13 DOWNTO 8),
+    dest_d => control(25 DOWNTO 20),
     data => d_bus,
     out_a => a_data,
     out_b => b_data

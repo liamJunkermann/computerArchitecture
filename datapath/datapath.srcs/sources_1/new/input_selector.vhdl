@@ -1,3 +1,6 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
 ENTITY input_selector IS
   PORT (
     a_in, b_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);

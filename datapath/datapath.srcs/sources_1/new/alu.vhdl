@@ -4,7 +4,7 @@ use IEEE.std_logic_1164.all;
 ENTITY alu IS
   PORT (
     a_in, b_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    g_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    g_in : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
     v, c : OUT STD_LOGIC;
     g_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
   );
@@ -50,20 +50,20 @@ ARCHITECTURE Behavior OF alu IS
 
 BEGIN
 
-  input_selector : input_selector PORT MAP(
+  input_selector_0 : input_selector PORT MAP(
     a_in => a_in,
     b_in => b_in,
     s_in => g_in(2 DOWNTO 1),
     selected => input_selected
   );
 
-  input_parser : input_parser PORT MAP(
+  input_parser_0 : input_parser PORT MAP(
     b => b_in,
     s_in => g_in(2 DOWNTO 1),
     y => input_parsed
   );
 
-  ripple_adder : ripple_adder PORT MAP(
+  ripple_adder_0 : ripple_adder PORT MAP(
     a => a_in,
     b => input_parsed,
     c_in => g_in(0),
@@ -72,7 +72,7 @@ BEGIN
     v_out => v
   );
 
-  mux2_32bit : mux2_32bit PORT MAP(
+  mux2_32bit_0 : mux2_32bit PORT MAP(
     s => g_in(3),
     in1 => ripple_adder_result,
     in2 => input_selected,

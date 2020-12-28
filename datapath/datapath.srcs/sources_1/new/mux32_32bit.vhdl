@@ -36,7 +36,7 @@ ENTITY mux32_32bit IS
     in29 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     in30 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     in31 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    z: out STD_LOGIC_VECTOR(31 downto 0)
+    z: OUT STD_LOGIC_VECTOR(31 downto 0)
   );
 END mux32_32bit;
 

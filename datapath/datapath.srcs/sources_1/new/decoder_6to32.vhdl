@@ -1,3 +1,6 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
 ENTITY decoder_6to32 IS
   PORT (
     s : IN STD_LOGIC_VECTOR(5 DOWNTO 0);

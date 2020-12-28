@@ -1,3 +1,6 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
 ENTITY full_adder IS
   PORT (
     x, y, z : IN STD_LOGIC;

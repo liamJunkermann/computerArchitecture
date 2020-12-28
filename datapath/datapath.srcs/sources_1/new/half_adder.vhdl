@@ -1,3 +1,6 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
 ENTITY half_adder IS
   PORT (
     x, y : IN STD_LOGIC;
