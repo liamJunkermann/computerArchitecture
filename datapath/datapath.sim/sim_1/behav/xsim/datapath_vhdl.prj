@@ -1,0 +1,20 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../datapath.srcs/sources_1/new/alu.vhdl" \
+"../../../../datapath.srcs/sources_1/new/decoder_6to32.vhdl" \
+"../../../../datapath.srcs/sources_1/new/full_adder.vhdl" \
+"../../../../datapath.srcs/sources_1/new/functional_unit.vhdl" \
+"../../../../datapath.srcs/sources_1/new/half_adder.vhdl" \
+"../../../../datapath.srcs/sources_1/new/input_parser.vhdl" \
+"../../../../datapath.srcs/sources_1/new/input_selector.vhdl" \
+"../../../../datapath.srcs/sources_1/new/mux2_32bit.vhdl" \
+"../../../../datapath.srcs/sources_1/new/mux32_32bit.vhdl" \
+"../../../../datapath.srcs/sources_1/new/mux3_1.vhdl" \
+"../../../../datapath.srcs/sources_1/new/reg32.vhdl" \
+"../../../../datapath.srcs/sources_1/new/register_file.vhdl" \
+"../../../../datapath.srcs/sources_1/new/ripple_adder.vhdl" \
+"../../../../datapath.srcs/sources_1/new/shifter.vhdl" \
+"../../../../datapath.srcs/sources_1/imports/Downloads/datapath.vhdl" \
+
+# Do not sort compile order
+nosort

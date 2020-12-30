@@ -1,0 +1,19 @@
+0.7
+2020.2
+Nov 18 2020
+09:47:47
+C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/imports/Downloads/datapath.vhdl,1609161097,vhdl,,,,datapath,,,,,,,,
+C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/alu.vhdl,1609161244,vhdl,,,,alu,,,,,,,,
+C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/decoder_6to32.vhdl,1609160419,vhdl,,,,decoder_6to32,,,,,,,,
+C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/full_adder.vhdl,1609160535,vhdl,,,,full_adder,,,,,,,,
+C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/functional_unit.vhdl,1609176731,vhdl,,,,functional_unit,,,,,,,,
+C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/half_adder.vhdl,1609160523,vhdl,,,,half_adder,,,,,,,,
+C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/input_parser.vhdl,1609160581,vhdl,,,,input_parser,,,,,,,,
+C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/input_selector.vhdl,1609160590,vhdl,,,,input_selector,,,,,,,,
+C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux2_32bit.vhdl,1609176731,vhdl,,,,mux2_32bit,,,,,,,,
+C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux32_32bit.vhdl,1609357111,vhdl,,,,mux32_32bit,,,,,,,,
+C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux3_1.vhdl,1609160508,vhdl,,,,mux3_1,,,,,,,,
+C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/reg32.vhdl,1609176731,vhdl,,,,reg32,,,,,,,,
+C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/register_file.vhdl,1609160759,vhdl,,,,register_file,,,,,,,,
+C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/ripple_adder.vhdl,1609160797,vhdl,,,,ripple_adder,,,,,,,,
+C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/shifter.vhdl,1609160510,vhdl,,,,shifter,,,,,,,,
