@@ -17,10 +17,8 @@
 -- Additional Comments:
 -- 
 ----------------------------------------------------------------------------------
-
-
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -31,103 +29,101 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity functional_unit_tb is
---  Port ( );
-end functional_unit_tb;
+ENTITY functional_unit_tb IS
+  --  Port ( );
+END functional_unit_tb;
 
-architecture Behavioral of functional_unit_tb is
-component functional_unit 
-PORT (
-    a_in, b_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    function_select : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
-    v, c, n, z : OUT STD_LOGIC;
-    f : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+ARCHITECTURE Behavioral OF functional_unit_tb IS
+  COMPONENT functional_unit
+    PORT (
+      a_in, b_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      function_select : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+      v, c, n, z : OUT STD_LOGIC;
+      f : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+    );
+  END COMPONENT;
+
+  SIGNAL a_in, b_in, f : STD_LOGIC_VECTOR(31 DOWNTO 0);
+  SIGNAL function_select : STD_LOGIC_VECTOR(4 DOWNTO 0);
+  SIGNAL v, c, n, z : STD_LOGIC;
+BEGIN
+
+  uut : functional_unit PORT MAP(
+    a_in => a_in,
+    b_in => b_in,
+    function_select => function_select,
+    v => v,
+    c => c,
+    n => n,
+    z => z,
+    f => f
   );
-  end component;
-  
-  signal a_in, b_in, f: std_logic_vector(31 downto 0);
-  signal function_select: std_logic_vector(4 downto 0);
-  signal v, c, n, z: std_logic;
-begin
 
-uut: functional_unit port map(
-a_in => a_in,
-b_in => b_in,
-function_select => function_select,
-v => v,
-c => c,
-n => n,
-z => z,
-f => f
-);
+  stim_proc : PROCESS
+  BEGIN
+    a_in <= "00000001000010001011101010011111";
+    b_in <= "01111001110100010010001110100111";
 
-stim_proc: process
-begin
-a_in <= "00000001000010001011101010011111";
-b_in <= "01111001110100010010001110100111";
+    function_select <= "00000";
 
-function_select <= "00000";
+    WAIT FOR 20ns;
+    function_select <= "00000";
 
-wait for 20ns;
-function_select <= "00000";
+    WAIT FOR 20ns;
+    function_select <= "00001";
 
-wait for 20ns;
-function_select <= "00001";
+    WAIT FOR 20ns;
+    function_select <= "00010";
 
-wait for 20ns;
-function_select <= "00010";
+    WAIT FOR 20ns;
+    function_select <= "00011";
 
-wait for 20ns;
-function_select <= "00011";
+    WAIT FOR 20ns;
+    function_select <= "00100";
 
-wait for 20ns;
-function_select <= "00100";
+    WAIT FOR 20ns;
+    function_select <= "00101";
 
-wait for 20ns;
-function_select <= "00101";
+    WAIT FOR 20ns;
+    function_select <= "00110";
 
-wait for 20ns;
-function_select <= "00110";
+    WAIT FOR 20ns;
+    function_select <= "00111";
 
-wait for 20ns;
-function_select <= "00111";
+    WAIT FOR 20ns;
+    function_select <= "01000";
 
-wait for 20ns;
-function_select <= "01000";
+    WAIT FOR 20ns;
+    function_select <= "01001";
 
-wait for 20ns;
-function_select <= "01001";
+    WAIT FOR 20ns;
+    function_select <= "01010";
 
-wait for 20ns;
-function_select <= "01010";
+    WAIT FOR 20ns;
+    function_select <= "01011";
 
-wait for 20ns;
-function_select <= "01011";
+    WAIT FOR 20ns;
+    function_select <= "01100";
 
-wait for 20ns;
-function_select <= "01100";
+    WAIT FOR 20ns;
+    function_select <= "01101";
 
-wait for 20ns;
-function_select <= "01101";
+    WAIT FOR 20ns;
+    function_select <= "01110";
 
-wait for 20ns;
-function_select <= "01110";
+    WAIT FOR 20ns;
+    function_select <= "01111";
 
-wait for 20ns;
-function_select <= "01111";
+    WAIT FOR 20ns;
+    function_select <= "10000";
 
-wait for 20ns;
-function_select <= "10000";
+    WAIT FOR 20ns;
+    function_select <= "10100";
 
-wait for 20ns;
-function_select <= "10100";
+    WAIT FOR 20ns;
+    function_select <= "11000";
 
-wait for 20ns;
-function_select <= "11000";
+    WAIT FOR 20ns;
 
-wait for 20ns;
-
-end process;
-
-
-end Behavioral;
+  END PROCESS;
+END Behavioral;
