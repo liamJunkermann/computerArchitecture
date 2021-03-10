@@ -1,5 +1,5 @@
-library IEEE;
-use IEEE.std_logic_1164.all;
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
 
 ENTITY mux32_32bit IS
   PORT (
@@ -36,7 +36,7 @@ ENTITY mux32_32bit IS
     in29 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     in30 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     in31 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    z: OUT STD_LOGIC_VECTOR(31 downto 0)
+    z : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
   );
 END mux32_32bit;
 
@@ -77,38 +77,38 @@ BEGIN
     in31)
   BEGIN
     CASE s IS
-        when "000000" => z <= in0;
-        when "000001" => z <= in1;
-        when "000010" => z <= in2;
-        when "000011" => z <= in3;
-        when "000100" => z <= in4;
-        when "000101" => z <= in5;
-        when "000110" => z <= in6;
-        when "000111" => z <= in7;
-        when "001000" => z <= in8;
-        when "001001" => z <= in9;
-        when "001010" => z <= in10;
-        when "001011" => z <= in11;
-        when "001100" => z <= in12;
-        when "001101" => z <= in13;
-        when "001110" => z <= in14;
-        when "001111" => z <= in15;
-        when "010000" => z <= in16;
-        when "010001" => z <= in17;
-        when "010010" => z <= in18;
-        when "010011" => z <= in19;
-        when "010100" => z <= in20;
-        when "010101" => z <= in21;
-        when "010110" => z <= in22;
-        when "010111" => z <= in23;
-        when "011000" => z <= in24;
-        when "011001" => z <= in25;
-        when "011010" => z <= in26;
-        when "011011" => z <= in27;
-        when "011100" => z <= in28;
-        when "011101" => z <= in29;
-        when "011110" => z <= in30;
-        when "011111" => z <= in31;
+      WHEN "000000" => z <= in0;
+      WHEN "000001" => z <= in1;
+      WHEN "000010" => z <= in2;
+      WHEN "000011" => z <= in3;
+      WHEN "000100" => z <= in4;
+      WHEN "000101" => z <= in5;
+      WHEN "000110" => z <= in6;
+      WHEN "000111" => z <= in7;
+      WHEN "001000" => z <= in8;
+      WHEN "001001" => z <= in9;
+      WHEN "001010" => z <= in10;
+      WHEN "001011" => z <= in11;
+      WHEN "001100" => z <= in12;
+      WHEN "001101" => z <= in13;
+      WHEN "001110" => z <= in14;
+      WHEN "001111" => z <= in15;
+      WHEN "010000" => z <= in16;
+      WHEN "010001" => z <= in17;
+      WHEN "010010" => z <= in18;
+      WHEN "010011" => z <= in19;
+      WHEN "010100" => z <= in20;
+      WHEN "010101" => z <= in21;
+      WHEN "010110" => z <= in22;
+      WHEN "010111" => z <= in23;
+      WHEN "011000" => z <= in24;
+      WHEN "011001" => z <= in25;
+      WHEN "011010" => z <= in26;
+      WHEN "011011" => z <= in27;
+      WHEN "011100" => z <= in28;
+      WHEN "011101" => z <= in29;
+      WHEN "011110" => z <= in30;
+      WHEN "011111" => z <= in31;
       WHEN OTHERS => z <= in1;
     END CASE;
   END PROCESS;

@@ -17,10 +17,8 @@
 -- Additional Comments:
 -- 
 ----------------------------------------------------------------------------------
-
-
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -31,45 +29,43 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity input_parser_tb is
---  Port ( );
-end input_parser_tb;
+ENTITY input_parser_tb IS
+    --  Port ( );
+END input_parser_tb;
 
-architecture Behavioral of input_parser_tb is
-    component input_parser
-    PORT (
-        b : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-        s_in : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
-        y : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
-      );
-     end component;
-     
-     signal b : std_logic_vector(31 downto 0) := (others => '0');
-     signal s_in : std_logic_vector(1 downto 0) := (others => '0');
-     signal y: std_logic_vector(31 downto 0);
-begin
+ARCHITECTURE Behavioral OF input_parser_tb IS
+    COMPONENT input_parser
+        PORT (
+            b : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+            s_in : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+            y : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+        );
+    END COMPONENT;
 
-    uut: input_parser port map(
+    SIGNAL b : STD_LOGIC_VECTOR(31 DOWNTO 0) := (OTHERS => '0');
+    SIGNAL s_in : STD_LOGIC_VECTOR(1 DOWNTO 0) := (OTHERS => '0');
+    SIGNAL y : STD_LOGIC_VECTOR(31 DOWNTO 0);
+BEGIN
+
+    uut : input_parser PORT MAP(
         b => b,
         s_in => s_in,
         y => y
-     );
-     stim_proc: process
-     begin
-     b <= x"AAAAAAAA";
-     s_in <= "00";
-     
-     wait for 10ns;
-     s_in <= "01";
-     
-     wait for 10ns;
-     s_in <= "10";
-     
-     wait for 10ns;
-     s_in <= "11";
-     
-     wait;
-     end process;
-    
+    );
+    stim_proc : PROCESS
+    BEGIN
+        b <= x"AAAAAAAA";
+        s_in <= "00";
 
-end Behavioral;
+        WAIT FOR 10ns;
+        s_in <= "01";
+
+        WAIT FOR 10ns;
+        s_in <= "10";
+
+        WAIT FOR 10ns;
+        s_in <= "11";
+
+        WAIT;
+    END PROCESS;
+END Behavioral;

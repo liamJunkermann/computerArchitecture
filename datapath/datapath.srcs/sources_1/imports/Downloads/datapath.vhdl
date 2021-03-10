@@ -1,16 +1,16 @@
-library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.std_logic_arith.all;
-use IEEE.STD_LOGIC_UNSIGNED.ALL;
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+USE IEEE.std_logic_arith.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 ENTITY datapath IS
   PORT (
-    flag_reset : IN STD_LOGIC_VECTOR(3 downto 0);
-    dest_reg, source_a, source_b, func_sel : IN STD_LOGIC_VECTOR(4 downto 0);
+    flag_reset : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+    dest_reg, source_a, source_b, func_sel : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
     temp_dest, temp_a, temp_b, muxb_ctrl, muxd_ctrl, read_write, muxm_ctrl, mem_write, flag_load, Clk : IN STD_LOGIC;
-    instruction_in : IN STD_LOGIC_VECTOR(31 downto 0);
-    instruction_out : OUT STD_LOGIC_VECTOR(31 downto 0);
-    flags : OUT STD_LOGIC_VECTOR(3 downto 0)
+    instruction_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    instruction_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    flags : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
   );
 END datapath;
 
@@ -42,38 +42,38 @@ ARCHITECTURE Behavioral OF datapath IS
       z : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
     );
   END COMPONENT;
-  
-  component flag_reg is
-    Port ( v_in, c_in, n_in, z_in, flag_load, Clk : in STD_LOGIC;
-          reset: in STD_LOGIC_VECTOR(3 downto 0);
-          flag_out : out STD_LOGIC_VECTOR (3 downto 0)
-      );
-   end component;
-   
-   component memory is
-   Port ( 
-        address: in STD_LOGIC_VECTOR(31 downto 0);
-        write_data: in std_logic_vector(31 downto 0);
-        MemWrite: in std_logic;
-        read_data: out std_logic_vector(31 downto 0)
+
+  COMPONENT flag_reg IS
+    PORT (
+      v_in, c_in, n_in, z_in, flag_load, Clk : IN STD_LOGIC;
+      reset : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+      flag_out : OUT STD_LOGIC_VECTOR (3 DOWNTO 0)
     );
-    end component;
-    
-    component zero_fill is
-    Port ( sb_in : in STD_LOGIC_VECTOR (4 downto 0);
-           zero_fill_out : out STD_LOGIC_VECTOR (31 downto 0));
-    end component;
+  END COMPONENT;
+
+  COMPONENT memory IS
+    PORT (
+      address : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      write_data : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      MemWrite : IN STD_LOGIC;
+      read_data : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+    );
+  END COMPONENT;
+
+  COMPONENT zero_fill IS
+    PORT (
+      sb_in : IN STD_LOGIC_VECTOR (4 DOWNTO 0);
+      zero_fill_out : OUT STD_LOGIC_VECTOR (31 DOWNTO 0));
+  END COMPONENT;
 
   SIGNAL a_bus, b_data, mem_out, func_out, d_bus, zero_fill_out, b_bus, muxm_out : STD_LOGIC_VECTOR(31 DOWNTO 0);
-  SIGNAL func_v, func_c, func_n, func_z :  STD_LOGIC;
-  
-  signal addr_a, addr_b, dest_d : STD_LOGIC_VECTOR(5 downto 0);
-  signal inst_addr : unsigned(31 downto 0);
-  
+  SIGNAL func_v, func_c, func_n, func_z : STD_LOGIC;
 
+  SIGNAL addr_a, addr_b, dest_d : STD_LOGIC_VECTOR(5 DOWNTO 0);
+  SIGNAL inst_addr : unsigned(31 DOWNTO 0);
 
 BEGIN
-    
+
   addr_a <= temp_a & source_a;
   addr_b <= temp_b & source_b;
   dest_d <= temp_dest & dest_reg;
@@ -112,15 +112,15 @@ BEGIN
     in2 => mem_out,
     z => d_bus
   );
-  
-  mux_m : mux2_32bit port map(
+
+  mux_m : mux2_32bit PORT MAP(
     s => muxm_ctrl,
     in1 => a_bus,
     in2 => instruction_in,
     z => muxm_out
   );
-  
-  flag_reg0 : flag_reg port map(
+
+  flag_reg0 : flag_reg PORT MAP(
     v_in => func_v,
     c_in => func_c,
     n_in => func_n,
@@ -130,20 +130,18 @@ BEGIN
     reset => flag_reset,
     flag_out => flags
   );
-  
-  zero_fill0: zero_fill port map(
-      sb_in => source_b,
-      zero_fill_out => zero_fill_out
+
+  zero_fill0 : zero_fill PORT MAP(
+    sb_in => source_b,
+    zero_fill_out => zero_fill_out
   );
-  
-  memory_m: memory port map (
+
+  memory_m : memory PORT MAP(
     address => muxm_out,
     write_data => b_bus,
     MemWrite => mem_write,
     read_data => mem_out
   );
-  
-
   instruction_out <= mem_out;
 
 END Behavioral; -- Behavioral

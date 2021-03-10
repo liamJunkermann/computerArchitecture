@@ -1,5 +1,5 @@
-library IEEE;
-use IEEE.std_logic_1164.all;
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
 
 ENTITY mux2_32bit IS
   PORT (

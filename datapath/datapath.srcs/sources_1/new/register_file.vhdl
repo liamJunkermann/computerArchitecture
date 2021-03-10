@@ -1,5 +1,5 @@
-library IEEE;
-use IEEE.std_logic_1164.all;
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
 
 ENTITY register_file IS
   PORT (
@@ -55,7 +55,7 @@ ARCHITECTURE Behavior OF register_file IS
       in29 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       in30 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       in31 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-      z: OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+      z : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
     );
   END COMPONENT;
 

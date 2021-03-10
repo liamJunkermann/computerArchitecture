@@ -1,5 +1,5 @@
-library ieee;
-use ieee.std_logic_1164.all;
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
 
 ENTITY decoder_6to32 IS
   PORT (

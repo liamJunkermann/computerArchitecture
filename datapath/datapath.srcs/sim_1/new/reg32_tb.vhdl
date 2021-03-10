@@ -16,10 +16,8 @@
 -- Additional Comments:
 -- 
 ----------------------------------------------------------------------------------
-
-
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -30,63 +28,59 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity reg32_tb is
---  Port ( );
-end reg32_tb;
+ENTITY reg32_tb IS
+  --  Port ( );
+END reg32_tb;
 
-architecture Behavioral of reg32_tb is
-component reg32
-  PORT (
-    D : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    load0, load1, Clk : IN STD_LOGIC;
-    Q : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+ARCHITECTURE Behavioral OF reg32_tb IS
+  COMPONENT reg32
+    PORT (
+      D : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      load0, load1, Clk : IN STD_LOGIC;
+      Q : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+    );
+  END COMPONENT;
+
+  SIGNAL D, Q : STD_LOGIC_VECTOR(31 DOWNTO 0);
+  SIGNAL load0, load1, Clk : STD_LOGIC;
+
+BEGIN
+
+  uut : reg32 PORT MAP(
+    D => D,
+    load0 => load0,
+    load1 => load1,
+    Clk => Clk,
+    Q => Q
   );
-end component;
 
-signal D, Q : std_logic_vector(31 downto 0);
-signal load0, load1, Clk : std_logic;
+  Clk_proc : PROCESS
+  BEGIN
+    Clk <= '0';
+    WAIT FOR 5ns;
+    Clk <= '1';
+    WAIT FOR 5ns;
+  END PROCESS;
 
-begin
+  stim_proc : PROCESS
+  BEGIN
 
-uut: reg32 port map(
-D => D,
-load0 => load0,
-load1 => load1,
-Clk => Clk,
-Q => Q
-);
-
-Clk_proc: process
-begin
-Clk <= '0';
-wait for 5ns;
-Clk <= '1';
-wait for 5ns;
-end process;
-
-stim_proc : process
-begin
-
-    wait for 10ns;
+    WAIT FOR 10ns;
     d <= "11111100101001100101110010000100";
     load0 <= '0';
     load1 <= '0';
-    
-    wait for 10ns;
+
+    WAIT FOR 10ns;
     load0 <= '1';
     load1 <= '1';
-    
-    wait for 10ns;
+
+    WAIT FOR 10ns;
     load0 <= '0';
     load1 <= '0';
     d <= "10010011110001110011100000101110";
-    
-    wait for 10ns;
-      load0 <= '1';
+
+    WAIT FOR 10ns;
+    load0 <= '1';
     load1 <= '1';
-    
-    
-    end process; 
-
-
-end Behavioral;
+  END PROCESS;
+END Behavioral;
