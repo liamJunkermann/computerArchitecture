@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Liam/Documents/GitHub/computerArchitecture/processor/processor.srcs/sources_1/new/microcoded_controller.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'microcoded_controller'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Liam/Documents/GitHub/computerArchitecture/processor/processor.srcs/sources_1/new/microprocessor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'microprocessor'

@@ -2,11 +2,11 @@
 # Webtalk v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Wed Dec 30 11:38:52 2020
-# Process ID: 4728
+# Start of session at: Wed Dec 30 13:36:52 2020
+# Process ID: 6860
 # Current directory: C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.sim/sim_1/behav/xsim
-# Command line: wbtcv.exe -mode batch -source C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.sim/sim_1/behav/xsim/xsim.dir/datapath_behav/webtalk/xsim_webtalk.tcl -notrace
+# Command line: wbtcv.exe -mode batch -source C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.sim/sim_1/behav/xsim/xsim.dir/shifter_tb_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
-source C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.sim/sim_1/behav/xsim/xsim.dir/datapath_behav/webtalk/xsim_webtalk.tcl -notrace
+source C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.sim/sim_1/behav/xsim/xsim.dir/shifter_tb_behav/webtalk/xsim_webtalk.tcl -notrace

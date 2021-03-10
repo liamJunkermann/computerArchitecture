@@ -1,0 +1,348 @@
+
+*** Running vivado
+    with args -log datapath.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source datapath.tcl
+
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source datapath.tcl -notrace
+Command: synth_design -top datapath -part xc7s6ftgb196-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s6'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s6'
+INFO: [Device 21-403] Loading part xc7s6ftgb196-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 5300
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1049.992 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'datapath' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/imports/Downloads/datapath.vhdl:14]
+INFO: [Synth 8-3491] module 'register_file' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/register_file.vhdl:4' bound to instance 'register_file0' of component 'register_file' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/imports/Downloads/datapath.vhdl:47]
+INFO: [Synth 8-638] synthesizing module 'register_file' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/register_file.vhdl:13]
+INFO: [Synth 8-3491] module 'reg32' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/reg32.vhdl:4' bound to instance 'reg00000' of component 'reg32' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/register_file.vhdl:113]
+INFO: [Synth 8-638] synthesizing module 'reg32' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/reg32.vhdl:12]
+INFO: [Synth 8-256] done synthesizing module 'reg32' (1#1) [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/reg32.vhdl:12]
+INFO: [Synth 8-3491] module 'reg32' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/reg32.vhdl:4' bound to instance 'reg00001' of component 'reg32' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/register_file.vhdl:120]
+INFO: [Synth 8-3491] module 'reg32' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/reg32.vhdl:4' bound to instance 'reg00010' of component 'reg32' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/register_file.vhdl:127]
+INFO: [Synth 8-3491] module 'reg32' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/reg32.vhdl:4' bound to instance 'reg00011' of component 'reg32' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/register_file.vhdl:134]
+INFO: [Synth 8-3491] module 'reg32' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/reg32.vhdl:4' bound to instance 'reg00100' of component 'reg32' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/register_file.vhdl:141]
+INFO: [Synth 8-3491] module 'reg32' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/reg32.vhdl:4' bound to instance 'reg00101' of component 'reg32' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/register_file.vhdl:148]
+INFO: [Synth 8-3491] module 'reg32' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/reg32.vhdl:4' bound to instance 'reg00110' of component 'reg32' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/register_file.vhdl:155]
+INFO: [Synth 8-3491] module 'reg32' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/reg32.vhdl:4' bound to instance 'reg00111' of component 'reg32' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/register_file.vhdl:162]
+INFO: [Synth 8-3491] module 'reg32' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/reg32.vhdl:4' bound to instance 'reg01000' of component 'reg32' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/register_file.vhdl:169]
+INFO: [Synth 8-3491] module 'reg32' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/reg32.vhdl:4' bound to instance 'reg01001' of component 'reg32' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/register_file.vhdl:176]
+INFO: [Synth 8-3491] module 'reg32' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/reg32.vhdl:4' bound to instance 'reg01010' of component 'reg32' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/register_file.vhdl:183]
+INFO: [Synth 8-3491] module 'reg32' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/reg32.vhdl:4' bound to instance 'reg01011' of component 'reg32' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/register_file.vhdl:190]
+INFO: [Synth 8-3491] module 'reg32' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/reg32.vhdl:4' bound to instance 'reg01100' of component 'reg32' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/register_file.vhdl:197]
+INFO: [Synth 8-3491] module 'reg32' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/reg32.vhdl:4' bound to instance 'reg01101' of component 'reg32' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/register_file.vhdl:204]
+INFO: [Synth 8-3491] module 'reg32' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/reg32.vhdl:4' bound to instance 'reg01110' of component 'reg32' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/register_file.vhdl:211]
+INFO: [Synth 8-3491] module 'reg32' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/reg32.vhdl:4' bound to instance 'reg01111' of component 'reg32' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/register_file.vhdl:218]
+INFO: [Synth 8-3491] module 'reg32' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/reg32.vhdl:4' bound to instance 'reg10000' of component 'reg32' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/register_file.vhdl:225]
+INFO: [Synth 8-3491] module 'reg32' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/reg32.vhdl:4' bound to instance 'reg10001' of component 'reg32' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/register_file.vhdl:232]
+INFO: [Synth 8-3491] module 'reg32' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/reg32.vhdl:4' bound to instance 'reg10010' of component 'reg32' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/register_file.vhdl:239]
+INFO: [Synth 8-3491] module 'reg32' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/reg32.vhdl:4' bound to instance 'reg10011' of component 'reg32' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/register_file.vhdl:246]
+INFO: [Synth 8-3491] module 'reg32' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/reg32.vhdl:4' bound to instance 'reg10100' of component 'reg32' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/register_file.vhdl:253]
+INFO: [Synth 8-3491] module 'reg32' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/reg32.vhdl:4' bound to instance 'reg10101' of component 'reg32' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/register_file.vhdl:260]
+INFO: [Synth 8-3491] module 'reg32' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/reg32.vhdl:4' bound to instance 'reg10110' of component 'reg32' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/register_file.vhdl:267]
+INFO: [Synth 8-3491] module 'reg32' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/reg32.vhdl:4' bound to instance 'reg10111' of component 'reg32' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/register_file.vhdl:274]
+INFO: [Synth 8-3491] module 'reg32' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/reg32.vhdl:4' bound to instance 'reg11000' of component 'reg32' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/register_file.vhdl:281]
+INFO: [Synth 8-3491] module 'reg32' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/reg32.vhdl:4' bound to instance 'reg11001' of component 'reg32' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/register_file.vhdl:288]
+INFO: [Synth 8-3491] module 'reg32' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/reg32.vhdl:4' bound to instance 'reg11010' of component 'reg32' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/register_file.vhdl:295]
+INFO: [Synth 8-3491] module 'reg32' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/reg32.vhdl:4' bound to instance 'reg11011' of component 'reg32' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/register_file.vhdl:302]
+INFO: [Synth 8-3491] module 'reg32' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/reg32.vhdl:4' bound to instance 'reg11100' of component 'reg32' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/register_file.vhdl:309]
+INFO: [Synth 8-3491] module 'reg32' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/reg32.vhdl:4' bound to instance 'reg11101' of component 'reg32' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/register_file.vhdl:316]
+INFO: [Synth 8-3491] module 'reg32' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/reg32.vhdl:4' bound to instance 'reg11110' of component 'reg32' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/register_file.vhdl:323]
+INFO: [Synth 8-3491] module 'reg32' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/reg32.vhdl:4' bound to instance 'reg11111' of component 'reg32' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/register_file.vhdl:330]
+INFO: [Synth 8-3491] module 'decoder_6to32' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/decoder_6to32.vhdl:4' bound to instance 'dest_decoder' of component 'decoder_6to32' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/register_file.vhdl:338]
+INFO: [Synth 8-638] synthesizing module 'decoder_6to32' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/decoder_6to32.vhdl:42]
+INFO: [Synth 8-256] done synthesizing module 'decoder_6to32' (2#1) [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/decoder_6to32.vhdl:42]
+INFO: [Synth 8-3491] module 'mux32_32bit' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux32_32bit.vhdl:4' bound to instance 'mux32_32bit_a' of component 'mux32_32bit' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/register_file.vhdl:379]
+INFO: [Synth 8-638] synthesizing module 'mux32_32bit' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux32_32bit.vhdl:43]
+INFO: [Synth 8-256] done synthesizing module 'mux32_32bit' (3#1) [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux32_32bit.vhdl:43]
+INFO: [Synth 8-3491] module 'mux32_32bit' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux32_32bit.vhdl:4' bound to instance 'mux32_32bit_b' of component 'mux32_32bit' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/register_file.vhdl:421]
+INFO: [Synth 8-256] done synthesizing module 'register_file' (4#1) [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/register_file.vhdl:13]
+INFO: [Synth 8-3491] module 'mux2_32bit' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux2_32bit.vhdl:4' bound to instance 'mux2_32bit0' of component 'mux2_32bit' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/imports/Downloads/datapath.vhdl:58]
+INFO: [Synth 8-638] synthesizing module 'mux2_32bit' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux2_32bit.vhdl:13]
+INFO: [Synth 8-226] default block is never used [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux2_32bit.vhdl:17]
+INFO: [Synth 8-256] done synthesizing module 'mux2_32bit' (5#1) [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux2_32bit.vhdl:13]
+INFO: [Synth 8-3491] module 'functional_unit' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/functional_unit.vhdl:4' bound to instance 'function_unit0' of component 'functional_unit' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/imports/Downloads/datapath.vhdl:65]
+INFO: [Synth 8-638] synthesizing module 'functional_unit' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/functional_unit.vhdl:13]
+INFO: [Synth 8-3491] module 'alu' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/alu.vhdl:4' bound to instance 'alu0' of component 'alu' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/functional_unit.vhdl:46]
+INFO: [Synth 8-638] synthesizing module 'alu' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/alu.vhdl:13]
+INFO: [Synth 8-3491] module 'input_selector' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/input_selector.vhdl:4' bound to instance 'input_selector_0' of component 'input_selector' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/alu.vhdl:53]
+INFO: [Synth 8-638] synthesizing module 'input_selector' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/input_selector.vhdl:12]
+INFO: [Synth 8-226] default block is never used [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/input_selector.vhdl:17]
+INFO: [Synth 8-256] done synthesizing module 'input_selector' (6#1) [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/input_selector.vhdl:12]
+INFO: [Synth 8-3491] module 'input_parser' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/input_parser.vhdl:4' bound to instance 'input_parser_0' of component 'input_parser' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/alu.vhdl:60]
+INFO: [Synth 8-638] synthesizing module 'input_parser' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/input_parser.vhdl:12]
+INFO: [Synth 8-3491] module 'mux2_1bit' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux2_1bit.vhdl:4' bound to instance 'mux00000' of component 'mux2_1bit' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/input_parser.vhdl:21]
+INFO: [Synth 8-638] synthesizing module 'mux2_1bit' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux2_1bit.vhdl:11]
+INFO: [Synth 8-226] default block is never used [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux2_1bit.vhdl:15]
+INFO: [Synth 8-256] done synthesizing module 'mux2_1bit' (7#1) [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux2_1bit.vhdl:11]
+INFO: [Synth 8-3491] module 'mux2_1bit' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux2_1bit.vhdl:4' bound to instance 'mux00001' of component 'mux2_1bit' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/input_parser.vhdl:27]
+INFO: [Synth 8-3491] module 'mux2_1bit' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux2_1bit.vhdl:4' bound to instance 'mux00010' of component 'mux2_1bit' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/input_parser.vhdl:33]
+INFO: [Synth 8-3491] module 'mux2_1bit' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux2_1bit.vhdl:4' bound to instance 'mux00011' of component 'mux2_1bit' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/input_parser.vhdl:39]
+INFO: [Synth 8-3491] module 'mux2_1bit' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux2_1bit.vhdl:4' bound to instance 'mux00100' of component 'mux2_1bit' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/input_parser.vhdl:45]
+INFO: [Synth 8-3491] module 'mux2_1bit' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux2_1bit.vhdl:4' bound to instance 'mux00101' of component 'mux2_1bit' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/input_parser.vhdl:51]
+INFO: [Synth 8-3491] module 'mux2_1bit' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux2_1bit.vhdl:4' bound to instance 'mux00110' of component 'mux2_1bit' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/input_parser.vhdl:57]
+INFO: [Synth 8-3491] module 'mux2_1bit' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux2_1bit.vhdl:4' bound to instance 'mux00111' of component 'mux2_1bit' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/input_parser.vhdl:63]
+INFO: [Synth 8-3491] module 'mux2_1bit' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux2_1bit.vhdl:4' bound to instance 'mux01000' of component 'mux2_1bit' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/input_parser.vhdl:69]
+INFO: [Synth 8-3491] module 'mux2_1bit' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux2_1bit.vhdl:4' bound to instance 'mux01001' of component 'mux2_1bit' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/input_parser.vhdl:75]
+INFO: [Synth 8-3491] module 'mux2_1bit' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux2_1bit.vhdl:4' bound to instance 'mux01010' of component 'mux2_1bit' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/input_parser.vhdl:81]
+INFO: [Synth 8-3491] module 'mux2_1bit' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux2_1bit.vhdl:4' bound to instance 'mux01011' of component 'mux2_1bit' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/input_parser.vhdl:87]
+INFO: [Synth 8-3491] module 'mux2_1bit' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux2_1bit.vhdl:4' bound to instance 'mux01100' of component 'mux2_1bit' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/input_parser.vhdl:93]
+INFO: [Synth 8-3491] module 'mux2_1bit' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux2_1bit.vhdl:4' bound to instance 'mux01101' of component 'mux2_1bit' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/input_parser.vhdl:99]
+INFO: [Synth 8-3491] module 'mux2_1bit' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux2_1bit.vhdl:4' bound to instance 'mux01110' of component 'mux2_1bit' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/input_parser.vhdl:105]
+INFO: [Synth 8-3491] module 'mux2_1bit' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux2_1bit.vhdl:4' bound to instance 'mux01111' of component 'mux2_1bit' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/input_parser.vhdl:111]
+INFO: [Synth 8-3491] module 'mux2_1bit' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux2_1bit.vhdl:4' bound to instance 'mux10000' of component 'mux2_1bit' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/input_parser.vhdl:117]
+INFO: [Synth 8-3491] module 'mux2_1bit' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux2_1bit.vhdl:4' bound to instance 'mux10001' of component 'mux2_1bit' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/input_parser.vhdl:123]
+INFO: [Synth 8-3491] module 'mux2_1bit' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux2_1bit.vhdl:4' bound to instance 'mux10010' of component 'mux2_1bit' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/input_parser.vhdl:129]
+INFO: [Synth 8-3491] module 'mux2_1bit' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux2_1bit.vhdl:4' bound to instance 'mux10011' of component 'mux2_1bit' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/input_parser.vhdl:135]
+INFO: [Synth 8-3491] module 'mux2_1bit' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux2_1bit.vhdl:4' bound to instance 'mux10100' of component 'mux2_1bit' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/input_parser.vhdl:141]
+INFO: [Synth 8-3491] module 'mux2_1bit' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux2_1bit.vhdl:4' bound to instance 'mux10101' of component 'mux2_1bit' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/input_parser.vhdl:147]
+INFO: [Synth 8-3491] module 'mux2_1bit' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux2_1bit.vhdl:4' bound to instance 'mux10110' of component 'mux2_1bit' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/input_parser.vhdl:153]
+INFO: [Synth 8-3491] module 'mux2_1bit' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux2_1bit.vhdl:4' bound to instance 'mux10111' of component 'mux2_1bit' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/input_parser.vhdl:159]
+INFO: [Synth 8-3491] module 'mux2_1bit' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux2_1bit.vhdl:4' bound to instance 'mux11000' of component 'mux2_1bit' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/input_parser.vhdl:165]
+INFO: [Synth 8-3491] module 'mux2_1bit' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux2_1bit.vhdl:4' bound to instance 'mux11001' of component 'mux2_1bit' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/input_parser.vhdl:171]
+INFO: [Synth 8-3491] module 'mux2_1bit' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux2_1bit.vhdl:4' bound to instance 'mux11010' of component 'mux2_1bit' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/input_parser.vhdl:177]
+INFO: [Synth 8-3491] module 'mux2_1bit' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux2_1bit.vhdl:4' bound to instance 'mux11011' of component 'mux2_1bit' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/input_parser.vhdl:183]
+INFO: [Synth 8-3491] module 'mux2_1bit' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux2_1bit.vhdl:4' bound to instance 'mux11100' of component 'mux2_1bit' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/input_parser.vhdl:189]
+INFO: [Synth 8-3491] module 'mux2_1bit' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux2_1bit.vhdl:4' bound to instance 'mux11101' of component 'mux2_1bit' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/input_parser.vhdl:195]
+INFO: [Synth 8-3491] module 'mux2_1bit' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux2_1bit.vhdl:4' bound to instance 'mux11110' of component 'mux2_1bit' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/input_parser.vhdl:201]
+INFO: [Synth 8-3491] module 'mux2_1bit' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux2_1bit.vhdl:4' bound to instance 'mux11111' of component 'mux2_1bit' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/input_parser.vhdl:207]
+INFO: [Synth 8-256] done synthesizing module 'input_parser' (8#1) [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/input_parser.vhdl:12]
+INFO: [Synth 8-3491] module 'ripple_adder' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/ripple_adder.vhdl:4' bound to instance 'ripple_adder_0' of component 'ripple_adder' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/alu.vhdl:66]
+INFO: [Synth 8-638] synthesizing module 'ripple_adder' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/ripple_adder.vhdl:13]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/full_adder.vhdl:4' bound to instance 'Bit0' of component 'full_adder' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/ripple_adder.vhdl:25]
+INFO: [Synth 8-638] synthesizing module 'full_adder' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/full_adder.vhdl:11]
+INFO: [Synth 8-3491] module 'half_adder' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/half_adder.vhdl:4' bound to instance 'half_adder0' of component 'half_adder' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/full_adder.vhdl:21]
+INFO: [Synth 8-638] synthesizing module 'half_adder' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/half_adder.vhdl:11]
+INFO: [Synth 8-256] done synthesizing module 'half_adder' (9#1) [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/half_adder.vhdl:11]
+INFO: [Synth 8-3491] module 'half_adder' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/half_adder.vhdl:4' bound to instance 'half_adder1' of component 'half_adder' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/full_adder.vhdl:22]
+INFO: [Synth 8-256] done synthesizing module 'full_adder' (10#1) [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/full_adder.vhdl:11]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/full_adder.vhdl:4' bound to instance 'Bit1' of component 'full_adder' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/ripple_adder.vhdl:28]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/full_adder.vhdl:4' bound to instance 'Bit2' of component 'full_adder' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/ripple_adder.vhdl:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/full_adder.vhdl:4' bound to instance 'Bit3' of component 'full_adder' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/ripple_adder.vhdl:34]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/full_adder.vhdl:4' bound to instance 'Bit4' of component 'full_adder' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/ripple_adder.vhdl:37]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/full_adder.vhdl:4' bound to instance 'Bit5' of component 'full_adder' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/ripple_adder.vhdl:40]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/full_adder.vhdl:4' bound to instance 'Bit6' of component 'full_adder' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/ripple_adder.vhdl:43]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/full_adder.vhdl:4' bound to instance 'Bit7' of component 'full_adder' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/ripple_adder.vhdl:46]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/full_adder.vhdl:4' bound to instance 'Bit8' of component 'full_adder' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/ripple_adder.vhdl:49]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/full_adder.vhdl:4' bound to instance 'Bit9' of component 'full_adder' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/ripple_adder.vhdl:52]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/full_adder.vhdl:4' bound to instance 'Bit10' of component 'full_adder' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/ripple_adder.vhdl:55]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/full_adder.vhdl:4' bound to instance 'Bit11' of component 'full_adder' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/ripple_adder.vhdl:58]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/full_adder.vhdl:4' bound to instance 'Bit12' of component 'full_adder' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/ripple_adder.vhdl:61]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/full_adder.vhdl:4' bound to instance 'Bit13' of component 'full_adder' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/ripple_adder.vhdl:64]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/full_adder.vhdl:4' bound to instance 'Bit14' of component 'full_adder' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/ripple_adder.vhdl:67]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/full_adder.vhdl:4' bound to instance 'Bit15' of component 'full_adder' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/ripple_adder.vhdl:70]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/full_adder.vhdl:4' bound to instance 'Bit16' of component 'full_adder' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/ripple_adder.vhdl:73]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/full_adder.vhdl:4' bound to instance 'Bit17' of component 'full_adder' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/ripple_adder.vhdl:76]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/full_adder.vhdl:4' bound to instance 'Bit18' of component 'full_adder' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/ripple_adder.vhdl:79]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/full_adder.vhdl:4' bound to instance 'Bit19' of component 'full_adder' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/ripple_adder.vhdl:82]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/full_adder.vhdl:4' bound to instance 'Bit20' of component 'full_adder' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/ripple_adder.vhdl:85]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/full_adder.vhdl:4' bound to instance 'Bit21' of component 'full_adder' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/ripple_adder.vhdl:88]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/full_adder.vhdl:4' bound to instance 'Bit22' of component 'full_adder' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/ripple_adder.vhdl:91]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/full_adder.vhdl:4' bound to instance 'Bit23' of component 'full_adder' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/ripple_adder.vhdl:94]
+INFO: [Common 17-14] Message 'Synth 8-3491' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-256] done synthesizing module 'ripple_adder' (11#1) [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/ripple_adder.vhdl:13]
+INFO: [Synth 8-256] done synthesizing module 'alu' (12#1) [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/alu.vhdl:13]
+INFO: [Synth 8-638] synthesizing module 'shifter' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/shifter.vhdl:13]
+INFO: [Synth 8-638] synthesizing module 'mux3_1' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux3_1.vhdl:12]
+INFO: [Synth 8-256] done synthesizing module 'mux3_1' (13#1) [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux3_1.vhdl:12]
+INFO: [Synth 8-256] done synthesizing module 'shifter' (14#1) [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/shifter.vhdl:13]
+INFO: [Synth 8-256] done synthesizing module 'functional_unit' (15#1) [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/functional_unit.vhdl:13]
+INFO: [Synth 8-256] done synthesizing module 'datapath' (16#1) [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/imports/Downloads/datapath.vhdl:14]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1049.992 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1049.992 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1049.992 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 1049.992 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1049.992 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1049.992 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1049.992 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s6ftgb196-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1049.992 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1049.992 ; gain = 0.000
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'z_reg' [C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux3_1.vhdl:15]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1049.992 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 65    
++---Registers : 
+	               32 Bit    Registers := 32    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 6     
+	   4 Input   32 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 160   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 10 (col length:20)
+BRAMs: 10 (col length: RAMB18 20 RAMB36 10)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1049.992 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1049.992 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1049.992 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1049.992 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1049.992 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1049.992 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1049.992 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1049.992 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1049.992 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1049.992 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |LUT2 |    39|
+|3     |LUT3 |     1|
+|4     |LUT4 |    17|
+|5     |LUT5 |     6|
+|6     |LUT6 |    55|
+|7     |LD   |    32|
+|8     |IBUF |    38|
+|9     |OBUF |    68|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1049.992 ; gain = 0.000
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 1049.992 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1049.992 ; gain = 0.000
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1049.992 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 32 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1049.992 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 32 instances were transformed.
+  LD => LDCE: 32 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+150 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1049.992 ; gain = 51.730
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.runs/synth_1/datapath.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file datapath_utilization_synth.rpt -pb datapath_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 30 12:44:04 2020...

@@ -2,6 +2,17 @@
 2020.2
 Nov 18 2020
 09:47:47
+C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sim_1/new/alu_tb.vhdl,1609356298,vhdl,,,,alu_tb,,,,,,,,
+C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sim_1/new/datapath_tb.vhdl,1609362525,vhdl,,,,datapath_tb,,,,,,,,
+C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sim_1/new/decoder_6to32_tb.vhdl,1609355974,vhdl,,,,decoder_6to32_tb,,,,,,,,
+C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sim_1/new/functional_unit_tb.vhdl,1609356923,vhdl,,,,functional_unit_tb,,,,,,,,
+C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sim_1/new/input_parser_tb.vhdl,1609185498,vhdl,,,,input_parser_tb,,,,,,,,
+C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sim_1/new/mux2_32bit_tb.vhdl,1609165082,vhdl,,,,mux2_32bit_tb,,,,,,,,
+C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sim_1/new/mux32_32bit_tb.vhdl,1609165089,vhdl,,,,mux32_32bit_tb,,,,,,,,
+C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sim_1/new/reg32_tb.vhdl,1609363731,vhdl,,,,reg32_tb,,,,,,,,
+C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sim_1/new/register_file_tb.vhdl,1609363859,vhdl,,,,register_file_tb,,,,,,,,
+C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sim_1/new/ripple_adder_tb.vhdl,1609354951,vhdl,,,,ripple_adder_tb,,,,,,,,
+C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sim_1/new/shifter_tb.vhdl,1609355484,vhdl,,,,shifter_tb,,,,,,,,
 C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/imports/Downloads/datapath.vhdl,1609161097,vhdl,,,,datapath,,,,,,,,
 C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/alu.vhdl,1609161244,vhdl,,,,alu,,,,,,,,
 C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/decoder_6to32.vhdl,1609160419,vhdl,,,,decoder_6to32,,,,,,,,
@@ -10,6 +21,7 @@ C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sourc
 C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/half_adder.vhdl,1609160523,vhdl,,,,half_adder,,,,,,,,
 C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/input_parser.vhdl,1609160581,vhdl,,,,input_parser,,,,,,,,
 C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/input_selector.vhdl,1609160590,vhdl,,,,input_selector,,,,,,,,
+C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux2_1bit.vhdl,1609360966,vhdl,,,,mux2_1bit,,,,,,,,
 C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux2_32bit.vhdl,1609176731,vhdl,,,,mux2_32bit,,,,,,,,
 C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux32_32bit.vhdl,1609357111,vhdl,,,,mux32_32bit,,,,,,,,
 C:/Users/Liam/Documents/GitHub/computerArchitecture/datapath/datapath.srcs/sources_1/new/mux3_1.vhdl,1609160508,vhdl,,,,mux3_1,,,,,,,,

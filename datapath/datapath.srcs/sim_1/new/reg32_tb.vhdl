@@ -55,7 +55,15 @@ load1 => load1,
 Clk => Clk,
 Q => Q
 );
-Clk <= not Clk after 5ns;
+
+Clk_proc: process
+begin
+Clk <= '0';
+wait for 5ns;
+Clk <= '1';
+wait for 5ns;
+end process;
+
 stim_proc : process
 begin
 

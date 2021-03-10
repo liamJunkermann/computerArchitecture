@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="alu_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="alu_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="783268fs"></ZoomEndTime>
+      <Cursor1Time time="1000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="276"></NameColumnWidth>
+      <ValueColumnWidth column_width="119"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="6" />
+   <wvobject fp_name="/alu_tb/a_in" type="array">
+      <obj_property name="ElementShortName">a_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">a_in[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/alu_tb/b_in" type="array">
+      <obj_property name="ElementShortName">b_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">b_in[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/alu_tb/g_out" type="array">
+      <obj_property name="ElementShortName">g_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">g_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/alu_tb/g_in" type="array">
+      <obj_property name="ElementShortName">g_in[3:0]</obj_property>
+      <obj_property name="ObjectShortName">g_in[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/alu_tb/v" type="logic">
+      <obj_property name="ElementShortName">v</obj_property>
+      <obj_property name="ObjectShortName">v</obj_property>
+   </wvobject>
+   <wvobject fp_name="/alu_tb/c" type="logic">
+      <obj_property name="ElementShortName">c</obj_property>
+      <obj_property name="ObjectShortName">c</obj_property>
+   </wvobject>
+</wave_config>
